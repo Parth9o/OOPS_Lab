@@ -36,10 +36,10 @@ int main() {
     cout << "Position after writing 3 records (tellp): " << outFile.tellp() << endl;
 
     // Demonstrate seekp(): Jump back to 1st record and update Parth's marks (89.5 -> 97.0)
-    // "101,Parth," is 11 characters long, so marks start at firstRecordPos + 11
+    // "101,Parth," is 10 characters long, so marks start at firstRecordPos + 10
     outFile.seekp(firstRecordPos + streamoff(11));
     outFile << "97.0";
-    cout << "Updated Atharv's marks in-place using seekp()!" << endl;
+    cout << "Updated Parth's marks in-place using seekp()!" << endl;
 
     outFile.close();
 
